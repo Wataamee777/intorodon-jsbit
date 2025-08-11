@@ -1,3 +1,4 @@
+import express from 'express';
 import 'dotenv/config';
 import { Client, GatewayIntentBits, SlashCommandBuilder, REST, Routes, EmbedBuilder } from 'discord.js';
 import { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } from '@discordjs/voice';
@@ -13,6 +14,16 @@ const quizSongs = [
   { title: 'discord通話', url: 'https://www.myinstants.com/media/sounds/discord-call-sound.mp3' },
   { titel: 'discord待機', url: 'https://www.myinstants.com/media/sounds/discord-stage-channel-music.mp3' }
 ];
+
+// ルートアクセス用の簡単なレスポンス
+app.get('/', (req, res) => {
+  res.send('イントロドンBotが稼働中！');
+});
+
+// サーバー起動
+app.listen(PORT, () => {
+  console.log(`Expressサーバーがポート${PORT}で起動しました`);
+});
 
 const client = new Client({
   intents: [
