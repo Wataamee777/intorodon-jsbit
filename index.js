@@ -11,7 +11,7 @@ const quizSongs = [
   { title: 'discord通知', url: 'https://www.myinstants.com/media/sounds/discord-notification.mp3' },
   { title: 'discord退出', url: 'https://www.myinstants.com/media/sounds/discord-leave-noise.mp3' },
   { title: 'discord通話', url: 'https://www.myinstants.com/media/sounds/discord-call-sound.mp3' },
-  { titel: 'discordステージ待機音', url: '' }
+  { titel: 'discord待機', url: 'https://www.myinstants.com/media/sounds/discord-stage-channel-music.mp3' }
 ];
 
 const client = new Client({
