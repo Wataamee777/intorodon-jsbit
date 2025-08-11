@@ -1,0 +1,20 @@
+{
+  "name": "intro-quiz-bot",
+  "version": "1.0.0",
+  "description": "Discord VCイントロドンBot with VOICEVOX TTS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@discordjs/voice": "^0.15.0",
+    "discord.js": "^14.14.0",
+    "dotenv": "^16.3.1"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "author": "わたあめえ",
+  "license": "MIT"
+}
