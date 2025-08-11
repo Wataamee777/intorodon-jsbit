@@ -4,6 +4,8 @@ import { Client, GatewayIntentBits, SlashCommandBuilder, REST, Routes, EmbedBuil
 import { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus } from '@discordjs/voice';
 import https from 'https';
 
+const app = express();  // ← ここが必須！
+
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 const VOICEVOX_APIKEY = process.env.VOICEVOX_APIKEY;
