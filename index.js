@@ -5,7 +5,7 @@ import { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerSt
 import https from 'https';
 
 const app = express();  // ← ここが必須！
-
+const PORT = 3000;
 const TOKEN = process.env.TOKEN;
 const CLIENT_ID = process.env.CLIENT_ID;
 const VOICEVOX_APIKEY = process.env.VOICEVOX_APIKEY;
