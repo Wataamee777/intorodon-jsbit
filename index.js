@@ -129,7 +129,6 @@ client.on('interactionCreate', async (interaction) => {
             if (collected.size === 0) {
               quizMessage.reply('⏳ 誰もリアクションしなかったみたい…');
             }
-            setTimeout(playNext, 3000);
           });
         }, 5000);
       }).on('error', (err) => {
