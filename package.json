@@ -1,21 +1,20 @@
 {
-  "name": "intro-quiz-bot",
+  "name": "intorodon-bot",
   "version": "1.0.0",
-  "description": "Discord VCイントロドンBot with VOICEVOX TTS",
+  "description": "Discord VCイントロドンBot",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "node index.js"
   },
-  "dependencies": {
-    "express": "^4.18.2",
-    "@discordjs/voice": "^0.15.0",
-    "discord.js": "^14.14.0",
-    "dotenv": "^16.3.1"
-  },
   "engines": {
     "node": ">=24.0.0"
   },
-  "author": "わたあめえ",
-  "license": "MIT"
+  "dependencies": {
+    "@discordjs/voice": "^0.15.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "libsodium-wrappers": "^0.7.11"
+  }
 }
