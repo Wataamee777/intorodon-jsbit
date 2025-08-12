@@ -137,8 +137,6 @@ client.on('interactionCreate', async (interaction) => {
         setTimeout(playNext, 3000);
       });
     };
-
-    playNext();
   }
     if (interaction.commandName === 'joinvc') {
     const voiceChannel = interaction.member.voice.channel;
