@@ -51,9 +51,8 @@ function getVoicevoxAudioStream(text) {
 }
 
 const commands = [
-  new SlashCommandBuilder()
-    .setName('startquiz')
-    .setDescription('イントロクイズを開始'),
+  new SlashCommandBuilder().setName('startquiz').setDescription('イントロクイズを開始'),
+  new SlashCommandBuilder().setName('joinvc').setDescription('vcにjoin')
 ].map((cmd) => cmd.toJSON());
 
 const rest = new REST({ version: '10' }).setToken(TOKEN);
@@ -140,6 +139,24 @@ client.on('interactionCreate', async (interaction) => {
     };
 
     playNext();
+  }
+    if (interaction.commandName === 'joinvc') {
+    const voiceChannel = interaction.member.voice.channel;
+    if (!voiceChannel) {
+      await interaction.reply('❌ まずはVCに入ってからコマンド使ってね！');
+      return;
+    }
+    try {
+      const connection = joinVoiceChannel({
+        channelId: voiceChannel.id,
+        guildId: voiceChannel.guild.id,
+        adapterCreator: voiceChannel.guild.voiceAdapterCreator,
+      });
+      await interaction.reply(`✅ VC「${voiceChannel.name}」に参加したよ！`);
+    } catch (error) {
+      console.error(error);
+      await interaction.reply('❌ VC参加に失敗したよ...');
+    }
   }
 });
 
